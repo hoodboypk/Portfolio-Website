@@ -124,8 +124,8 @@ span{
 
 .home-img img{
     position: relative;
-    top: 3rem;
-    width: 32vw;
+    top: 2.5rem;
+    width: 25vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -139,7 +139,7 @@ span{
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -204,4 +204,87 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     color: black;
+}
+
+
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words{
+    0%,
+    20%{
+        content: "Frontend Developer";
+    }
+    21%,
+    40%{
+        content: "Game Developer";
+    }
+    41%,
+    60%{
+        content: "AR Developer";
+    }
+    61%,
+    80%{
+        content: "Web Developer";
+    }
+    81%,
+    100%{
+        content: "Bot Developer";
+    }
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
 }
