@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #000000;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.logo span{
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3,6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+main {
+    margin-top: 70px; /* Adjust this value based on the height of your header to avoid overlap */
+    position: relative;
+}
+
+section {
+    display: none; /* Hide all sections by default */
+    padding: 2rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+section.active {
+    display: block; /* Only show the active section */
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+
+#education {
+    margin-top: 50px;
+}
+
+.schools {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schools .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.schools .list li {
+    background: var(--bg-color);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid var(--main-color);
+}
+
+.schools .list li:hover {
+    transform: translateY(-5px);
+}
+
+.schools h2 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.schools p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.schools p:first-of-type {
+    font-weight: bold;
+}
+
+.schools p:last-of-type {
+    font-weight: bold;
+}
+
+
+#experiences {
+    margin-top: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
