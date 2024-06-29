@@ -172,6 +172,7 @@ section.hidden {
 
 #skills {
     margin-top: 50px;
+    animation: fillBars 3s 1;
 }
 
 .skills {
@@ -185,7 +186,7 @@ section.hidden {
 .skill-name {
     font-size: 18px;
     font-weight: 700;
-    color: #f1f1f1;
+    color: var(--text-color);
     text-transform: uppercase;
     margin: 20px 0;
 }
@@ -198,7 +199,7 @@ section.hidden {
 
 .skill-per {
     height: 14px;
-    background: #d13639;
+    background: var(--main-color);
     border-radius: 3px;
     position: relative;
 }
@@ -213,6 +214,7 @@ section.hidden {
     top: -35px;
     right: 0;
     transform: translateX(50%);
+    color: black;
 }
 
 .skill-per::after {
