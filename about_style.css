@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: none;
+    scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
 
@@ -16,22 +16,22 @@
     --main-color: #00ffee;
 }
 
-html{
+html {
     font-size: 60%;
     overflow-x: hidden;
 }
 
-body{
+body {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 4rem;
+    padding: 1rem 12%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -40,22 +40,23 @@ body{
     z-index: 5;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
-    cursor: pointer;transition: 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-.logo span{
+.logo span {
     text-shadow: 0 0 25px var(--main-color);
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -65,22 +66,18 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
 
-#menu-icon{
-    font-size: 3,6rem;
+#menu-icon {
+    font-size: 3.6rem;
     color: var(--main-color);
     display: none;
 }
 
-span{
-    color: var(--main-color);
-}
-
-.logo span{
+span {
     color: var(--main-color);
 }
 
@@ -113,7 +110,6 @@ section.hidden {
     transform: translateX(-100%);
     opacity: 0;
 }
-
 
 #education {
     margin-top: 50px;
@@ -165,7 +161,6 @@ section.hidden {
     font-weight: bold;
 }
 
-
 #experiences {
     margin-top: 50px;
 }
@@ -202,6 +197,8 @@ section.hidden {
     background: var(--main-color);
     border-radius: 3px;
     position: relative;
+    width: 0; /* Add initial width for animation */
+    animation: fillBars 2s forwards; /* Add animation */
 }
 
 .skill-per::before {
@@ -211,7 +208,7 @@ section.hidden {
     background: #f1f1f1;
     border-radius: 4px;
     font-size: 12px;
-    top: -35px;
+    top: -25px;
     right: 0;
     transform: translateX(50%);
     color: black;
@@ -223,7 +220,7 @@ section.hidden {
     width: 10px;
     height: 10px;
     background: #f1f1f1;
-    top: -20px;
+    top: -12px;
     right: 0;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;
@@ -234,7 +231,7 @@ section.hidden {
         width: 0;
     }
     to {
-        width: 100;
+        width: 100%; /* Change this to 100% for the full width of the parent */
     }
 }
 
