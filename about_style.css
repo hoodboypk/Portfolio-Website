@@ -95,7 +95,7 @@ section {
 }
 
 #education .schools,
-#experiences .schools {
+#experiences .companies {
     background-color: var(--second-bg-color);
     padding: 2rem;
     border-radius: 8px;
@@ -103,11 +103,19 @@ section {
     margin-bottom: 3rem;
 }
 
-.schools .list {
+h1 {
+    font-size: 4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.schools .list,
+.companies .list {
     list-style: none;
 }
 
-.schools .list li {
+.schools .list li,
+.companies .list li {
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 8px;
@@ -115,17 +123,20 @@ section {
     transition: transform 0.3s ease;
 }
 
-.schools .list li:hover {
+.schools .list li:hover,
+.companies .list li:hover {
     transform: translateY(-5px);
 }
 
-.schools h2 {
+.schools h2,
+.companies h2 {
     font-size: 2rem;
     color: var(--main-color);
     margin-bottom: 0.5rem;
 }
 
-.schools p {
+.schools p,
+.companies p {
     margin: 0.5rem 0;
     color: var(--text-color);
 }
