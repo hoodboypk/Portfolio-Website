@@ -1,7 +1,8 @@
 :root {
-    --bg-color: rgb(20, 20, 20);
-    --card-color: rgb(23, 23, 23);
-    --glow-color: rgba(255, 255, 255, 0.5);
+    --bg-color: #000000;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 #heading {
-    color: rgb(240, 240, 240);
+    color: var(--text-color);
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     margin-bottom: 20px;
@@ -36,7 +37,7 @@ body {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--second-bg-color);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -48,7 +49,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 0 20px var(--glow-color);
+    box-shadow: 0 0 20px var(--main-color);
     transform: scale(1.05);
 }
 
@@ -71,20 +72,20 @@ body {
 
 .card::before {
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.06),
+            var(--main-color),
             transparent 40%);
     z-index: 3;
 }
 
 .card::after {
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.4),
+            var(--main-color),
             transparent 40%);
     z-index: 1;
 }
 
 .card>.card-content {
-    background-color: var(--card-color);
+    background-color: var(--second-bg-color);
     border-radius: inherit;
     display: flex;
     flex-direction: column;
@@ -102,7 +103,7 @@ h2,
 h3,
 h4,
 span {
-    color: rgb(240, 240, 240);
+    color: var(--text-color);
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     margin: 0px;
@@ -136,7 +137,7 @@ span {
 }
 
 .card-info-title>h4 {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--main-color);
     font-size: 0.85em;
     margin-top: 8px;
 }
