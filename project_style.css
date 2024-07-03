@@ -1,6 +1,7 @@
 :root {
     --bg-color: rgb(20, 20, 20);
     --card-color: rgb(23, 23, 23);
+    --glow-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -23,10 +24,10 @@ body {
 }
 
 #cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-width: 916px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* increased gap */
+    max-width: 960px; /* adjusted max-width to account for the increased gap */
     width: calc(100% - 20px);
 }
 
@@ -43,6 +44,12 @@ body {
     flex-direction: column;
     position: relative;
     width: 300px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px var(--glow-color);
+    transform: scale(1.05);
 }
 
 .card:hover::before {
@@ -143,17 +150,21 @@ span {
     }
 
     #cards {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
         max-width: 1000px;
         padding: 10px 0px;
     }
 
     .card {
         flex-shrink: 1;
-        width: calc(50% - 4px);
     }
 }
 
 @media(max-width: 500px) {
+    #cards {
+        grid-template-columns: 1fr; /* Adjust for very small screens */
+    }
+
     .card {
         height: 180px;
     }
