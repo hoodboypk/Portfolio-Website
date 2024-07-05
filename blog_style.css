@@ -5,7 +5,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: none;
+    scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
 
@@ -16,16 +16,74 @@
     --main-color: #00ffee;
 }
 
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
 body {
-    align-items: center;
     background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    margin: 0px;
-    overflow: hidden;
-    padding: 0px;
+    align-items: center;
+    margin: 0;
+    padding-top: 80px; /* Adjusted for fixed header */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 12%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+.content {
+    align-items: center;
 }
 
 .heading {
@@ -48,7 +106,7 @@ body {
     width: calc(100% - 20px);
 }
 
-#cards:hover>.card::after {
+#cards:hover > .card::after {
     opacity: 1;
 }
 
@@ -78,29 +136,25 @@ body {
     border-radius: inherit;
     content: "";
     height: 100%;
-    left: 0px;
+    left: 0;
     opacity: 0;
     position: absolute;
-    top: 0px;
+    top: 0;
     transition: opacity 500ms;
     width: 100%;
 }
 
 .card::before {
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            var(--main-color),
-            transparent 40%);
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--main-color), transparent 40%);
     z-index: 3;
 }
 
 .card::after {
-    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            var(--main-color),
-            transparent 40%);
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), var(--main-color), transparent 40%);
     z-index: 1;
 }
 
-.card>.card-content {
+.card > .card-content {
     background-color: var(--second-bg-color);
     border-radius: inherit;
     display: flex;
@@ -112,16 +166,10 @@ body {
     z-index: 2;
 }
 
-/* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
-
-h1,
-h2,
-h3,
-h4,
-span {
+h1, h2, h3, h4, span {
     color: var(--main-color);
     font-weight: 400;
-    margin: 0px;
+    margin: 0;
 }
 
 .card-image {
@@ -143,7 +191,7 @@ span {
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 
 .card-info {
@@ -152,20 +200,18 @@ span {
     gap: 10px;
 }
 
-.card-info-title>h3 {
+.card-info-title > h3 {
     font-size: 1.1em;
     line-height: 20px;
 }
 
-.card-info-title>h4 {
-    color: var(--text-color);
+.card-info-title > h4 {
+    color: var (--text-color);
     font-size: 0.85em;
     margin-top: 8px;
 }
 
-/* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
-
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
     body {
         align-items: flex-start;
         overflow: auto;
@@ -174,7 +220,7 @@ span {
     #cards {
         grid-template-columns: repeat(2, 1fr);
         max-width: 1000px;
-        padding: 10px 0px;
+        padding: 10px 0;
     }
 
     .card {
@@ -182,7 +228,7 @@ span {
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     #cards {
         grid-template-columns: 1fr;
     }
@@ -196,20 +242,20 @@ span {
     }
 
     .card-info-wrapper {
-        padding: 0px 10px;
+        padding: 0 10px;
     }
 
-    .card-info-title>h3 {
+    .card-info-title > h3 {
         font-size: 0.9em;
     }
 
-    .card-info-title>h4 {
+    .card-info-title > h4 {
         font-size: 0.8em;
         margin-top: 4px;
     }
 }
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
     .card {
         width: 100%;
     }
