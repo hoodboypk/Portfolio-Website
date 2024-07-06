@@ -10,14 +10,14 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class = "logo">Pratik
+        <a href="index.html" class="logo">Pratik
             <span>Kumar</span>
         </a>
 
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="index.html" class = "active">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="blog.html">Blogs</a>
@@ -26,6 +26,11 @@
     </header>
     <section class="content">
         <h1 class="heading">My <span>Blogs</span></h1>
+        <select id="topicDropdown">
+            <option value="Tech">Tech</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Travel">Travel</option>
+        </select>
         <div id="cards">
             <div class="card">
                 <div class="card-content">
@@ -35,7 +40,7 @@
                     <div class="card-info-wrapper">
                         <div class="card-info">
                             <div class="card-info-title">
-                                <h3>Blog Title 1</h3>
+                                <h3 id="title1">Blog Title 1</h3>
                                 <h4>Description: This is a description of blog 1.</h4>
                             </div>
                         </div>
@@ -50,7 +55,7 @@
                     <div class="card-info-wrapper">
                         <div class="card-info">
                             <div class="card-info-title">
-                                <h3>Blog Title 2</h3>
+                                <h3 id="title2">Blog Title 2</h3>
                                 <h4>Description: This is a description of blog 2.</h4>
                             </div>
                         </div>
@@ -65,7 +70,7 @@
                     <div class="card-info-wrapper">
                         <div class="card-info">
                             <div class="card-info-title">
-                                <h3>Blog Title 3</h3>
+                                <h3 id="title3">Blog Title 3</h3>
                                 <h4>Description: This is a description of blog 3.</h4>
                             </div>
                         </div>
@@ -75,7 +80,8 @@
         </div>
     </section>
 
-    <script src="./cardglow.js"></script>
+    
+    <script src="blog_script.js"></script>
 </body>
 
 </html>
