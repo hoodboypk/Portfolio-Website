@@ -1,0 +1,17 @@
+{
+    "topics": [
+      {
+        "name": "Tech",
+        "titles": ["Tech Blog 1", "Tech Blog 2", "Tech Blog 3"]
+      },
+      {
+        "name": "Lifestyle",
+        "titles": ["Lifestyle Blog 1", "Lifestyle Blog 2", "Lifestyle Blog 3"]
+      },
+      {
+        "name": "Travel",
+        "titles": ["Travel Blog 1", "Travel Blog 2", "Travel Blog 3"]
+      }
+    ]
+  }
+  
