@@ -26,11 +26,15 @@
     </header>
     <section class="content">
         <h1 class="heading">My <span>Blogs</span></h1>
-        <select id="topicDropdown">
-            <option value="Tech">Tech</option>
-            <option value="Lifestyle">Lifestyle</option>
-            <option value="Travel">Travel</option>
-        </select>
+        <div class="dropdown-container">
+            <label for="topicDropdown" class="dropdown-label">Select Topic:</label>
+            <select id="topicDropdown">
+                <!-- Options will be populated by JavaScript -->
+                <option value="Tech">Tech</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Travel">Travel</option>
+            </select>
+        </div>
         <div id="cards">
             <div class="card">
                 <div class="card-content">
@@ -80,7 +84,6 @@
         </div>
     </section>
 
-    
     <script src="blog_script.js"></script>
 </body>
 
