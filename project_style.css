@@ -45,7 +45,7 @@ body {
     z-index: 5;
 }
 
-.logo {
+.logo{
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
@@ -53,12 +53,14 @@ body {
     transition: 0.3s ease;
 }
 
-.logo:hover {
+.logo:hover{
     transform: scale(1.1);
 }
 
-.logo span {
+.logo span{
     text-shadow: 0 0 25px var(--main-color);
+    color: var(--main-color);
+
 }
 
 .navbar {
@@ -167,8 +169,8 @@ body {
     z-index: 2;
 }
 
-h1, h2, h3, h4, span {
-    color: var(--main-color);
+h1, h2, h3, h4 {
+    /* color: var(--main-color); */
     font-weight: 400;
     margin: 0;
 }
@@ -202,13 +204,13 @@ h1, h2, h3, h4, span {
 }
 
 .card-info-title > h3 {
-    font-size: 1.1em;
+    font-size: 2em;
     line-height: 20px;
 }
 
 .card-info-title > h4 {
     color: var (--text-color);
-    font-size: 0.85em;
+    font-size: 1em;
     margin-top: 8px;
 }
 
